@@ -2,15 +2,11 @@
 
 ## Level Goal
 
-The password for the next level is stored in a file called `--spaces in this filename--` located in the home directory.
+The password for the next level is stored in a file called `-` located in the home directory.
 
 ## Commands You May Need
 
 `ls`, `cd`, `cat`, `file`, `du`, `find`
-
-## Helpful Reading Material
-
-- Google Search for “spaces in filename”
 
 ## Solution
 
@@ -25,17 +21,17 @@ ssh bandit1@bandit.labs.overthewire.org -p 2220
 ### Step 2: List the files
 
 ```bash
-ls
+ls -al
 ```
 
-You will find the file named `--spaces in this filename--`.
+You will notice a file named `-`.
 
-### Step 3: Read the file
+### Step 3: Read the file correctly
 
-Because the filename begins with hyphens and contains spaces, use a relative path and escape the spaces:
+Because the filename is just a hyphen, you must reference it explicitly:
 
 ```bash
-cat ./--spaces\ in\ this\ filename--
+cat ./-
 ```
 
 The output is the password for **Bandit Level 2**. It is intentionally not included here.
