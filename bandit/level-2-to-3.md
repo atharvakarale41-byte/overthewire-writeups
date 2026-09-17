@@ -2,7 +2,7 @@
 
 ## Level Goal
 
-The password for the next level is stored in a hidden file in the `inhere` directory.
+The password for the next level is stored in a file called `spaces in this filename`.
 
 ## Commands You May Need
 
@@ -18,19 +18,20 @@ Log in using the previous Bandit password:
 ssh bandit2@bandit.labs.overthewire.org -p 2220
 ```
 
-### Step 2: Enter the `inhere` directory and list hidden files
+### Step 2: List the files in the home directory
 
 ```bash
-cd inhere
-ls -a
+ls
 ```
 
-The listing includes the hidden file `...Hiding-From-You`.
+You will find a file named `spaces in this filename`.
 
-### Step 3: Read the hidden file
+### Step 3: Read the file correctly
+
+Because the filename contains spaces, escape them with backslashes:
 
 ```bash
-cat ./...Hiding-From-You
+cat ./spaces\ in\ this\ filename
 ```
 
 The output is the password for **Bandit Level 3**. It is intentionally not included here.
